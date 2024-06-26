@@ -82,7 +82,8 @@ window.onload = function() {
         // Let's play! increment clicked object and decrease rounds.
         let chosenProduct = chosenProducts[event.srcElement.id];
         chosenProduct.timesClicked++;
-        
+        console.log(rounds," round(s) remain");
+        console.log("you chose ",chosenProduct.name);
         rounds--;
   
         generateProducts();
@@ -131,11 +132,13 @@ window.onload = function() {
           labels: chartLabels,
           datasets: [{
             label: 'Votes',
+            backgroundColor: "red",
             data: votesData
           }, {
             label: 'Views',
+            backgroundColor: "blue",
             data: viewedData
-          }]
+            }]
         },
         options: {
           responsive: true,
