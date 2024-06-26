@@ -132,11 +132,9 @@ window.onload = function() {
           labels: chartLabels,
           datasets: [{
             label: 'Votes',
-            backgroundColor: "red",
             data: votesData
           }, {
             label: 'Views',
-            backgroundColor: "blue",
             data: viewedData
             }]
         },
