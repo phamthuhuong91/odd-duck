@@ -45,13 +45,11 @@ body {
   
   #productContainer button {
     font-weight: bold;
-    height: 5vh;
-    width: 15vh;
-    margin-bottom: 4vh;
-    color: #152b55;
-    background: #7788aa;
+    margin: 1%;
+    color: black;
+    font-size: large;
+    background: white;
     border-color: #152b55;
-    border-radius: 10px;
   }
   
   #productContainer button:hover {
@@ -63,5 +61,6 @@ body {
   #siteWelcome {
     height: 60vh;
     width: 80vw;
+    padding: 1%;
     margin: 0 auto;
   }

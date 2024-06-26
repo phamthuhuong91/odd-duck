@@ -99,7 +99,7 @@ window.onload = function() {
     function handleResults() {
       // Create restart button
       let restartBtn = document.createElement('button');
-      restartBtn.innerText = 'Vote Again!';
+      restartBtn.innerText = 'Do you want to vote again';
       restartBtn.id = 'restartBtn';
       container.appendChild(restartBtn);
   
@@ -149,18 +149,19 @@ window.onload = function() {
         }
       });
     }
-  
-    // Save stats before window is closed or refreshed
-    function quickSave() {
-      localStorage.setItem('objectList', JSON.stringify(OddProduct.objectList));
-    }
+
+      // Save stats before window is closed or refreshed
+      function quickSave() {
+        localStorage.setItem('objectList', JSON.stringify(OddProduct.objectList));
+      }
+      
+      generateProducts();
     
-    generateProducts();
+      // Event Listeners
+      container.addEventListener('click', productClick);
+    
+      window.addEventListener('beforeunload', function() {
+        quickSave();
+      }) 
   
-    // Event Listeners
-    container.addEventListener('click', productClick);
-  
-    window.addEventListener('beforeunload', function() {
-      quickSave();
-    })
   }
